@@ -1,9 +1,11 @@
 name: Run Scraping Automation
 
 on:
+  push:
+    branches:
+      - main
   schedule:
-    - cron: '0 9 * * 2'
-    - cron: '0 0 * * 2'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -12,8 +14,9 @@ permissions:
 
 jobs:
   run-script:
-
     runs-on: ubuntu-latest
+    env:
+      CALL_ME: ${{ secrets.CALL_ME }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
