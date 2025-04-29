@@ -16,7 +16,7 @@ jobs:
   run-script:
     runs-on: ubuntu-latest
     env:
-      CALL_ME: ${{ secrets.CALL_ME }}
+      CALL_ME_NOW: ${{ secrets.CALL_ME_NOW }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
