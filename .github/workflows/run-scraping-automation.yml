@@ -15,8 +15,6 @@ permissions:
 jobs:
   run-script:
     runs-on: ubuntu-latest
-    env:
-      ANOTHER_SEC: ${{ secrets.ANOTHER_SEC }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
