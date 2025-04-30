@@ -17,6 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CALL_ME: ${{ secrets.CALL_ME }}
+      ANOTHER_ONE: ${{ secrets.ANOTHER_ONE }}
+      THIS_ONE: ${{ secrets.THIS_ONE }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
